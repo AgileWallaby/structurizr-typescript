@@ -1,6 +1,7 @@
 import { describe, it } from "mocha";
 import { testApiCompatitbility, testApiIdempotency } from "./api-compatibility";
 import { testPlantUMLWriter, testPlantUMLWriterIsAbleToHandleProperlyPackageNameWithMultipleWords } from "./plantUMLWriter";
+import { testStructurizrDSLWriter, testStructurizrDSLWriterIsAbleToHandleProperlyPackageNameWithMultipleWords } from "./structurizrDSLWriter";
 import { testElementStyleThemeExport, testFullThemeExport } from "./themeExport";
 import * as  deepEqualInAnyOrder from 'deep-equal-in-any-order';
 import * as chai from "chai";
@@ -24,6 +25,8 @@ describe("structurizr-typescript", () => {
                 "handles long system names properly when exporting as package in container view",
                 testPlantUMLWriterIsAbleToHandleProperlyPackageNameWithMultipleWords
             );
+            it("export dsl", testStructurizrDSLWriter);
+            it("export other dsl", testStructurizrDSLWriterIsAbleToHandleProperlyPackageNameWithMultipleWords);
         })
     });
 
