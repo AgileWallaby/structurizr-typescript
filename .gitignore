@@ -3,3 +3,4 @@ dist/
 sample/node_modules/
 sample/dist/
 .env
+.DS_Store
